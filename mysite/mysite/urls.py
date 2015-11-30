@@ -16,8 +16,15 @@ Including another URLconf
 from django.conf.urls import *
 from django.contrib import admin
 #from django.conf.urls import *
-from mysite.views import hello
+from mysite.views import *
 
 urlpatterns = patterns('',
 	('^hello/$',hello),
+	('^time0/$',current_datetime0),
+	('^time1/$',current_datetime1),
+	('^time2/$',current_datetime2),
+	('^time/$',current_datetime),
+	('^time/plus/(\d{1,2})/$',hours_ahead),
+	('^time1/plus/(\d{1,2})/$',hours_ahead1),
+
 )
