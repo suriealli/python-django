@@ -24,4 +24,4 @@ class BBS_user(models.Model):
     signature = models.CharField(max_length=128,default='111')
     photo = models.ImageField(upload_to="up_photo",default="up_photo/default.jpg")
     def __unicode__(self):
-        return self.user
+        return self.user.username
