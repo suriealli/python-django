@@ -22,6 +22,7 @@ admin.autodiscover()
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^comments/',include('django_comments.urls')),
-    url(r'^$',include('app01.urls')),
-
+    url(r'^$','app01.views.index',name='index'),
+    url(r'^contact','app01.views.contact_me',name='contact_me'),
+    url(r'^postmessage/$', 'app01.views.postmessage', name = 'postmessage'),
 ]

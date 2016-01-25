@@ -129,3 +129,13 @@ class Article(models.Model):#文章表
         return self.title
     class Meta:#按时间下降顺序排序
         ordering = ['-created_time']
+
+
+class Message(models.Model):#留言板
+    name = models.CharField(max_length = 20)
+    context = models.CharField(max_length = 200)
+    vote_date = models.DateTimeField(auto_now_add = True)
+
+    def __unicode__(self):
+        return self.context
+
