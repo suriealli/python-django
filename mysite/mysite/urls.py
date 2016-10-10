@@ -27,4 +27,5 @@ urlpatterns = patterns('',
 	('^time/plus/(\d{1,2})/$',hours_ahead),
 	('^time1/plus/(\d{1,2})/$',hours_ahead1),
         ('^admin/',include(admin.site.urls)),
+        ('^request/',get_request),
 )
