@@ -3,7 +3,7 @@
     <head>
         <title>Rango</title>
     </head>
-
+    
     <body>
         <h1>{{ category_name }}</h1>
         {% if category %}
@@ -20,4 +20,5 @@
             The specified category {{ category_name }} does not exist!
         {% endif %}
     </body>
+    <a href="/rango/fifth_add_page/{{ category_slug }}">Add a New Page</a><br />
 </html>

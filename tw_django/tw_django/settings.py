@@ -1,3 +1,4 @@
+#coding:utf8
 """
 Django settings for tw_django project.
 
@@ -41,6 +42,15 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rango',
 ]
+
+#密码加密方式
+PASSWORD_HASHERS = (
+    #可以用pip install bcrypt来安装Bcrypt
+    #'django.contrib.auth.hashers.BCryptSHA256PasswordHasher',
+    #'django.contrib.auth.hashers.BCryptPasswordHasher',
+    'django.contrib.auth.hashers.PBKDF2PasswordHasher',
+    'django.contrib.auth.hashers.PBKDF2SHA1PasswordHasher',
+)
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -155,3 +165,5 @@ STATICFILES_DIRS = (
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+# 如果未登录自动跳转页面，可自定义
+LOGIN_URL = '/rango/login'
