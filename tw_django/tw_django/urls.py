@@ -13,10 +13,25 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
+<<<<<<< HEAD
 #from django.conf.urls import url
 from django.conf.urls import patterns,url
+=======
+# from django.conf.urls import url
+from django.conf.urls import patterns,url,include
+>>>>>>> 0de10fc27d3481953231493a32afd04973454d86
 from django.contrib import admin
+from django.conf import settings
 
-urlpatterns = [
-    url(r'^admin/', admin.site.urls),
-]
+urlpatterns = patterns('',
+	#app rango urls here
+	url(r'^rango/', include('rango.urls')),
+	url(r'^admin/', admin.site.urls),
+	)
+if settings.DEBUG:
+    urlpatterns += patterns(
+        'django.views.static',
+        (r'^media/(?P<path>.*)','serve',{'document_root':settings.MEDIA_ROOT}), )
+# urlpatterns = [
+#     url(r'^admin/', admin.site.urls),
+# ]
