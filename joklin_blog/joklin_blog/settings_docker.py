@@ -17,8 +17,8 @@ import os
 
 env = {
     'SECRET_KEY': os.environ.get('SECRET_KEY', 'I use joklin'),
-    'WEBSITE_TITLE': os.environ.get('WEBSITE_TITLE', u'Vmaig'),
-    'WEBSITE_WELCOME': os.environ.get('WEBSITE_WELCOME', u'欢迎来到Vmaig'),
+    'WEBSITE_TITLE': os.environ.get('WEBSITE_TITLE', u'Joklin'),
+    'WEBSITE_WELCOME': os.environ.get('WEBSITE_WELCOME', u'欢迎来到Joklin'),
     'DATABAE_ENGINE': os.environ.get(
         'DATABAE_ENGINE',
         'django.db.backends.postgresql_psycopg2'
@@ -160,7 +160,7 @@ STATIC_URL = '/static/'
 STATIC_ROOT = '/joklin_blog/static/'
 
 # 设置user model
-AUTH_USER_MODEL = "joklin_auth.VmaigUser"
+AUTH_USER_MODEL = "joklin_auth.JoklinUser"
 
 
 # log配置

@@ -93,8 +93,8 @@ http://joklin.com
     QINIU_BUCKET_NAME = ''
     
     # 网站标题等内容配置
-    WEBSITE_TITLE = u'Vmaig'
-    WEBSITE_WELCOME = u'欢迎来到Vmaig'
+    WEBSITE_TITLE = u'Joklin'
+    WEBSITE_WELCOME = u'欢迎来到Joklin'
 ```
 
 初始化数据库 :
@@ -117,7 +117,7 @@ http://joklin.com
 	例子:
 	
 	sudo docker run -d -p 80:80 --name joklin\
-                            -e WEBSITE_TITLE='Vmaig'\
+                            -e WEBSITE_TITLE='Joklin'\
                             -e SECRET_KEY='django secret key'\
                             -e WEBSITE_WELCOME='欢迎来到joklin'\
                             -e EMAIL_BACKEND='django.core.mail.backends.smtp.EmailBackend' \

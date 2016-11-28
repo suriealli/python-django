@@ -11,8 +11,8 @@ from django.contrib.auth.tokens import default_token_generator
 from django.contrib.sites.models import get_current_site
 from django.utils.http import (base36_to_int, is_safe_url,
                                urlsafe_base64_decode, urlsafe_base64_encode)
-from joklin_auth.forms import VmaigUserCreationForm, VmaigPasswordRestForm
-from joklin_auth.models import VmaigUser
+from joklin_auth.forms import JoklinUserCreationForm, JoklinPasswordRestForm
+from joklin_auth.models import JoklinUser
 from joklin_system.models import Notification
 import time
 import datetime
@@ -88,7 +88,7 @@ class UserControl(View):
         password2 = self.request.POST.get("password2", "")
         email = self.request.POST.get("email", "")
 
-        form = VmaigUserCreationForm(request.POST)
+        form = JoklinUserCreationForm(request.POST)
 
         errors = []
         # 验证表单是否正确
@@ -159,7 +159,7 @@ class UserControl(View):
         username = self.request.POST.get("username", "")
         email = self.request.POST.get("email", "")
 
-        form = VmaigPasswordRestForm(request.POST)
+        form = JoklinPasswordRestForm(request.POST)
 
         errors = []
 
@@ -194,8 +194,8 @@ class UserControl(View):
 
         try:
             uid = urlsafe_base64_decode(uidb64)
-            user = VmaigUser._default_manager.get(pk=uid)
-        except (TypeError, ValueError, OverflowError, VmaigUser.DoesNotExist):
+            user = JoklinUser._default_manager.get(pk=uid)
+        except (TypeError, ValueError, OverflowError, JoklinUser.DoesNotExist):
             user = None
 
         token_generator = default_token_generator

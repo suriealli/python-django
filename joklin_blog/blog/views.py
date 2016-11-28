@@ -13,9 +13,9 @@ from django.contrib.auth.forms import PasswordChangeForm, SetPasswordForm
 from django.contrib.auth.tokens import default_token_generator
 from blog.models import Article, Category, Carousel, Column, Nav, News
 from joklin_comments.models import Comment
-from joklin_auth.models import VmaigUser
+from joklin_auth.models import JoklinUser
 from joklin_system.models import Link
-from joklin_auth.forms import VmaigUserCreationForm, VmaigPasswordRestForm
+from joklin_auth.forms import JoklinUserCreationForm, JoklinPasswordRestForm
 from django.conf import settings
 import datetime
 import time

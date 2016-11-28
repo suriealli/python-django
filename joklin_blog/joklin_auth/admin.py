@@ -2,14 +2,14 @@
 from django.contrib import admin
 from django.contrib.auth.models import Group
 from django.contrib.auth.admin import UserAdmin
-from joklin_auth.models import VmaigUser
-from joklin_auth.forms import VmaigUserCreationForm
+from joklin_auth.models import JoklinUser
+from joklin_auth.forms import JoklinUserCreationForm
 
 
 # Register your models here.
 
-class VmaigUserAdmin(UserAdmin):
-    add_form = VmaigUserCreationForm
+class JoklinUserAdmin(UserAdmin):
+    add_form = JoklinUserCreationForm
     add_fieldsets = (
         (None, {
             'classes': ('wide',),
@@ -23,4 +23,4 @@ class VmaigUserAdmin(UserAdmin):
     )
 
 admin.site.unregister(Group)
-admin.site.register(VmaigUser, VmaigUserAdmin)
+admin.site.register(JoklinUser, JoklinUserAdmin)

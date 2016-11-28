@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 from django import forms
-from joklin_auth.models import VmaigUser
+from joklin_auth.models import JoklinUser
 from django.contrib.auth.tokens import default_token_generator
 from django.contrib.sites.models import get_current_site
 from django.utils.http import urlsafe_base64_encode
@@ -13,7 +13,7 @@ logger = logging.getLogger(__name__)
 
 
 # 参考自django.contrib.auth.forms.UserCreationForm
-class VmaigUserCreationForm(forms.ModelForm):
+class JoklinUserCreationForm(forms.ModelForm):
 
     # 错误信息
     error_messages = {
@@ -51,7 +51,7 @@ class VmaigUserCreationForm(forms.ModelForm):
     )
 
     class Meta:
-        model = VmaigUser
+        model = JoklinUser
         fields = ("username", "email")
 
     def clean_username(self):
@@ -59,8 +59,8 @@ class VmaigUserCreationForm(forms.ModelForm):
         # but it sets a nicer error message than the ORM. See #13147.
         username = self.cleaned_data["username"]
         try:
-            VmaigUser._default_manager.get(username=username)
-        except VmaigUser.DoesNotExist:
+            JoklinUser._default_manager.get(username=username)
+        except JoklinUser.DoesNotExist:
             return username
         raise forms.ValidationError(
             self.error_messages["duplicate_username"]
@@ -80,22 +80,22 @@ class VmaigUserCreationForm(forms.ModelForm):
 
         # 判断是这个email 用户是否存在
         try:
-            VmaigUser._default_manager.get(email=email)
-        except VmaigUser.DoesNotExist:
+            JoklinUser._default_manager.get(email=email)
+        except JoklinUser.DoesNotExist:
             return email
         raise forms.ValidationError(
             self.error_messages["duplicate_email"]
         )
 
     def save(self, commit=True):
-        user = super(VmaigUserCreationForm, self).save(commit=False)
+        user = super(JoklinUserCreationForm, self).save(commit=False)
         user.set_password(self.cleaned_data["password1"])
         if commit:
             user.save()
         return user
 
 
-class VmaigPasswordRestForm(forms.Form):
+class JoklinPasswordRestForm(forms.Form):
 
     # 错误信息
     error_messages = {
@@ -123,10 +123,10 @@ class VmaigPasswordRestForm(forms.Form):
 
         if username and email:
             try:
-                self.user = VmaigUser.objects.get(
+                self.user = JoklinUser.objects.get(
                     username=username, email=email, is_active=True
                 )
-            except VmaigUser.DoesNotExist:
+            except JoklinUser.DoesNotExist:
                 raise forms.ValidationError(
                     self.error_messages["email_error"]
                 )

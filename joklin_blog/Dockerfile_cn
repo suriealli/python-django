@@ -33,7 +33,7 @@ RUN service postgresql start &&\
     sleep 10 &&\
     python manage.py makemigrations --settings joklin_blog.settings_docker &&\
     python manage.py migrate --settings joklin_blog.settings_docker &&\
-    echo "from joklin_auth.models import VmaigUser; VmaigUser.objects.create_superuser('admin', 'admin@example.com', 'password')" | python manage.py shell --settings joklin_blog.settings_docker &&\
+    echo "from joklin_auth.models import JoklinUser; JoklinUser.objects.create_superuser('admin', 'admin@example.com', 'password')" | python manage.py shell --settings joklin_blog.settings_docker &&\
     echo 'yes' | python manage.py collectstatic --settings joklin_blog.settings_docker
 
 RUN ln -s /joklin_blog/nginx.conf /etc/nginx/sites-enabled/joklin

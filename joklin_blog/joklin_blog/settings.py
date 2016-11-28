@@ -116,7 +116,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 # 设置user model
-AUTH_USER_MODEL = "joklin_auth.VmaigUser"
+AUTH_USER_MODEL = "joklin_auth.JoklinUser"
 
 
 # log配置
@@ -224,5 +224,5 @@ QINIU_SECRET_KEY = ''
 QINIU_BUCKET_NAME = ''
 
 # 网站标题等内容配置
-WEBSITE_TITLE = u'Vmaig'
-WEBSITE_WELCOME = u'欢迎来到Vmaig'
+WEBSITE_TITLE = u'Joklin'
+WEBSITE_WELCOME = u'欢迎来到Joklin'

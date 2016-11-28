@@ -19,7 +19,7 @@ class string_with_title(str):
 
 # Create your models here.
 
-class VmaigUser(AbstractUser):
+class JoklinUser(AbstractUser):
     img = models.CharField(max_length=200, default='/static/tx/default.jpg',
                            verbose_name=u'头像地址')
     intro = models.CharField(max_length=200, blank=True, null=True,
