@@ -9,17 +9,42 @@ from django.contrib.auth.decorators import login_required
 
 from rango.forms import CategoryForm,PageForm
 from rango.forms import UserForm, UserProfileForm
+
+from datetime import datetime
 # Create your views here.
 
+
 def first(request):
+    visits = int(request.COOKIES.get('visits', '1'))
+    # request.session.set_test_cookie()
     category_list = Category.objects.order_by('-name')
     context_dict = {'categories': category_list}
-    return render(request, 'rango/first_page.html', context_dict)
+
+    reset_last_visit_time = False
+    if 'last_visit' in request.COOKIES:
+        last_visit = request.COOKIES['last_visit']
+        last_visit_time = datetime.strptime(last_visit[:-7], "%Y-%m-%d %H:%M:%S")
+        if (datetime.now() - last_visit_time).seconds  > 5: #如果为.days=0，则间隔为1天
+            visits = visits + 1
+            reset_last_visit_time = True
+    else:
+        last_visit_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        reset_last_visit_time = True
+    context_dict['visits'] = visits
+    context_dict['last_visit_time'] = last_visit_time
+    print last_visit_time
+    response = render(request, 'rango/first_page.html', context_dict)
+    if reset_last_visit_time:
+        response.set_cookie('last_visit', datetime.now())
+        response.set_cookie('visits', visits)
+
+    return response
 
 def second(request):
     category_list = Category.objects.order_by('-name')
     context_dict = {'categories': category_list}
     return render(request, 'rango/second_page.html', context_dict)
+
 #登陆不允许访问该项
 @login_required
 def third_category(request,category_name_slug): #category_name_slug这个参数必须在强制的request参数之后
@@ -105,6 +130,9 @@ def fifth_add_page(request,category_name_slug):  #test_second_page
 
 #注册
 def register(request):
+    # if request.session.test_cookie_worked():
+    #     print ">>>> TEST COOKIE WORKED!"
+    #     request.session.delete_test_cookie()
     # A boolean value for telling the template whether the registration was successful.
     # Set to False initially. Code changes value to True when registration succeeds.
     registered = False

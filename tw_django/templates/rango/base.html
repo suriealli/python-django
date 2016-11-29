@@ -12,14 +12,16 @@
     <hr />
     <div>
         <ul>
-        {% if user.isauthenticated %}
+        {% if user.is_authenticated %}
             <li><a href="/rango/restricted/">Restricted Page</a></li>
             <li><a href="/rango/fourth_add_category/">Add a New Category</a></li>
             <li><a href="/rango/logout/">Logout</a></li>
         {% else %}
-            <li><a href="/rango/register/">Register Here</a><a href="/rango/login/">Login</a></li>
+            <li><a href="/rango/register/">Register Here</a></li>
+            <li><a href="/rango/login/">Login</a></li>
         {% endif %}
             <li><a href="/rango/about/">About</a></li>
         </ul>
     </div>
+    <footer>{% block footer %}{% endblock %}</footer>
 </html>
