@@ -127,15 +127,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
 STATIC_URL = '/static/'
-
+STATIC_ROOT = os.path.join(BASE_DIR,'static')
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR,'blog'),
     os.path.join(BASE_DIR,'joklin_auth/static'),
-    os.path.join(BASE_DIR,'joklin_blog/static'),
-    os.path.join(BASE_DIR,'joklin_comment/static'),
-    os.path.join(BASE_DIR,'joklin_system/static'),
+    os.path.join(BASE_DIR,'blog/static'),
+    os.path.join(BASE_DIR,'joklin_comments/static'),
 )
-
 # 设置user model
 AUTH_USER_MODEL = "joklin_auth.JoklinUser"
 
