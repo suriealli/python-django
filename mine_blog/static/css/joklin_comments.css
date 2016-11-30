@@ -1,104 +1,86 @@
+
 #anchor-quote:target {
     float: left;
     margin: -100px;
 }
-/*按钮样式*/
-.btn-joklin-comments{
-    color: #FFF;
-    background-color: #D9534F;
-    border-color: #D43F3A;
+.btn-vmaig-comments {
+    background-color: hsla(1.73913, 64.486%, 41.9608%, 1);
+    border-color: #d43f3a;
+    color: rgba(255, 255, 255, 1);
 }
-
-/*panel 样式*/
-.panel-joklin-comments{
-    box-shadow: 0px 0px 5px #C2C2C2;
-    border-color:#EEE;
+.panel-vmaig-comments {
+    border-color: #eee;
+    box-shadow: 0 0 5px #c2c2c2;
 }
-
-.panel-joklin-comments .panel-heading{
-    color: #EEE;
-    background-color: #222;
-    border-color: #EEE;
+.panel-vmaig-comments .panel-heading {
+    background-color: rgba(0, 0, 0, 1);
+    border-color: #eee;
+    color: rgba(255, 255, 255, 1);
 }
-
-.panel-joklin-comments .input-group-addon{
-    color: #EEE;
-    background-color: #3D4450;
-    border:2px solid #3D4450;
+.panel-vmaig-comments .input-group-addon {
+    background-color: rgba(0, 0, 0, 1);
+    border: 2px solid #3d4450;
+    color: rgba(255, 255, 255, 1);
 }
-
-.panel-joklin-comments .badge{
-    background-color:#D94600;
+.panel-vmaig-comments .badge {
+    background-color: hsla(19.3548, 100%, 42.549%, 1);
 }
-
-.panel-joklin-comments span.btn{
-    padding:0px;
-    margin-right:5px;
+.panel-vmaig-comments span.btn {
+    margin-right: 5px;
+    padding: 0;
 }
-
-/*评论框****************/
-.joklin-comment ul{
-    padding-left:0px;
+.vmaig-comment ul {
+    padding-left: 0;
 }
-.joklin-comment ul li{
-    list-style-type:none;
-    border-top:1px dotted #ddd;
-    padding:10px;
+.vmaig-comment ul li {
+    border-top: 1px dotted #ddd;
+    list-style-type: none;
+    padding: 10px;
 }
-
-.joklin-comment-tx {
-    float:left;
+.vmaig-comment-tx {
+    float: left;
 }
-
-.joklin-comment-content{
-    padding-left:50px;
+.vmaig-comment-content {
+    padding-left: 50px;
     word-break: break-all;
 }
-
-.joklin-comment-content h1{
-    margin:0px;
-    font-size:15px;
-    padding-bottom:10px;
+.vmaig-comment-content h1 {
+    font-size: 15px;
+    margin: 0;
+    padding-bottom: 10px;
 }
-
-.joklin-comment-edit {
-    padding-left:50px;
-    margin-bottom:20px;
+.vmaig-comment-edit {
+    margin-bottom: 20px;
+    padding-left: 50px;
 }
-
-.joklin-comment-edit textarea{
-    width:100%;
-    margin-bottom:10px;
+.vmaig-comment-edit textarea {
+    margin-bottom: 10px;
+    width: 100%;
 }
-
-.joklin-comment-edit button{
-
+.vmaig-comment-edit button {
 }
-
-/***********************/
-
-
-/*首页右侧的 comment面板样式*/
 .comment-tx {
-    float:left;
+    float: left;
 }
-
 .comment-info {
-    padding-left:20%;
+    padding-left: 20%;
+}
+.comment-username a {
+    color: hsla(91.5789, 94.3262%, 72.3529%, 1);
+    font-size: 14px;
+}
+.comment-content {
+    word-break: break-all;
+}
+.comment-quote p {
+    border: 2px solid #eee;
+    padding: 5px;
 }
 
-.comment-username a{
-    color: #438904;
+.article-content p{
     font-size: 14px;
 }
 
-.comment-content {
-    word-break:break-all;
-}
-
-/***********************/
-
-.comment-quote p{
-    border: 2px solid #EEE;
-    padding: 5px;
+.article-tags a {
+     font-size: 14px;
 }

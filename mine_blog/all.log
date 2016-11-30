@@ -1,0 +1,31 @@
+[2016-11-30 15:49:34,567] [ERROR] views : [UserControl]用户上传头像为空:[%s]
+[2016-11-30 15:58:34,693] [ERROR] base : Internal Server Error: /user/undefined
+Traceback (most recent call last):
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/core/handlers/base.py", line 164, in get_response
+    response = response.render()
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/template/response.py", line 158, in render
+    self.content = self.rendered_content
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/template/response.py", line 133, in rendered_content
+    template = self._resolve_template(self.template_name)
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/template/response.py", line 88, in _resolve_template
+    new_template = self.resolve_template(template)
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/template/response.py", line 78, in resolve_template
+    return loader.select_template(template, using=self.using)
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/template/loader.py", line 76, in select_template
+    raise TemplateDoesNotExist(', '.join(template_name_list))
+TemplateDoesNotExist: blog/user.html
+[2016-11-30 15:58:34,693] [ERROR] base : Internal Server Error: /user/undefined
+Traceback (most recent call last):
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/core/handlers/base.py", line 164, in get_response
+    response = response.render()
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/template/response.py", line 158, in render
+    self.content = self.rendered_content
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/template/response.py", line 133, in rendered_content
+    template = self._resolve_template(self.template_name)
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/template/response.py", line 88, in _resolve_template
+    new_template = self.resolve_template(template)
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/template/response.py", line 78, in resolve_template
+    return loader.select_template(template, using=self.using)
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/template/loader.py", line 76, in select_template
+    raise TemplateDoesNotExist(', '.join(template_name_list))
+TemplateDoesNotExist: blog/user.html

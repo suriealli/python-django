@@ -265,7 +265,7 @@ footer {
     font-size: 0px;
     line-height: 0;
     border-width: 4px;
-    border-style: solid;
+    /*border-style: solid;*/
     border-image: none;
     right: -8px;
     top: 10px;
@@ -311,7 +311,8 @@ footer {
 }
 
 .home-post .post-content .thumbnail{
-    border:1px solid #ED9C29;
+    border:1px;
+    /*solid #ED9C29;*/
     padding:0px;
 }
 
@@ -371,7 +372,8 @@ footer {
 }
 
 .all-post .post-content .thumbnail{
-    border: 1px solid #ED9C29;
+    border: 1px;
+    /*solid #ED9C29;*/
     padding: 0px;
 }
 
