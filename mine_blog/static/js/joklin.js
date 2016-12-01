@@ -10,7 +10,7 @@
     
     "host": "121.42.176.120",
     "user": "joklin",
-    "password": "12",
+    "password": "",
     "port": "62919",
     
     "remote_path": "/home/joklin",

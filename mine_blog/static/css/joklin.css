@@ -4,7 +4,13 @@ body {
     font-family:"Microsoft YaHei","WenQuanYi Micro Hei","tohoma,sans-serif";
     color:#6B6B6B;
     font-size:12px;
-    background:url('../img/bg.jpg') repeat scroll 0% 0% transparent;
+    /*平铺*/
+    /*background:url('../img/bg.jpg') repeat scroll 100% 100% transparent;*/
+
+    /*background-size:100%;*/
+    background:url('../img/bg.jpg') no-repeat;
+    background-size:100%;
+
 }
 
 header {
