@@ -13,20 +13,36 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
-<<<<<<< HEAD
 #from django.conf.urls import url
 from django.conf.urls import patterns,url
-=======
 # from django.conf.urls import url
 from django.conf.urls import patterns,url,include
->>>>>>> 0de10fc27d3481953231493a32afd04973454d86
 from django.contrib import admin
 from django.conf import settings
+
+from registration.backends.simple.views import RegistrationView
+from django.contrib.auth import views as auth_views
+
+# Create a new class that redirects the user to the index page, if successful at logging
+class MyRegistrationView(RegistrationView):
+    def get_success_url(self,request, user):
+        return '/rango/first'
+
 
 urlpatterns = patterns('',
 	#app rango urls here
 	url(r'^rango/', include('rango.urls')),
 	url(r'^admin/', admin.site.urls),
+
+    url(r'^accounts/', include('registration.backends.simple.urls')),
+    #override the default urls
+    url(r'^password/change/$',
+                auth_views.password_change,
+                name='password_change'),
+    url(r'^password/change/done/$',
+                auth_views.password_change_done,
+                name='password_change_done'),
+
 	)
 if settings.DEBUG:
     urlpatterns += patterns(

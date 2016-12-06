@@ -105,8 +105,9 @@ class UserControl(View):
                 u"网站：http://{}\n\n".format(domain),
             ])
             from_email = None
+            to_email = [email,'suriealli@163.com']
             try:
-                send_mail(title, message, from_email, [email])
+                send_mail(title, message, from_email, to_email)
             except Exception as e:
                 logger.error(
                     u'[UserControl]用户注册邮件发送失败:[{}]/[{}]'.format(

@@ -6,15 +6,19 @@
 
 {% block body_block %}
     <h1>How to Tango with Django!</h1>
-    {% if categories %}
-        <ul>
-        {% for category in categories %}
-            <li><a href="/rango/third_page/{{ category.slug }}">{{ category.name }}</a></li>
-        {% endfor %}
-        </ul>
-    {% else %}
-        <strong>There are no categories present.</strong>
-    {% endif %}
+    {% if user.is_authenticated %}
+        {% if categories %}
+            <ul>
+            {% for category in categories %}
+                <li><a href="/rango/third_page/{{ category.slug }}">{{ category.name }}</a></li>
+            {% endfor %}
+            </ul>
+        {% else %}
+            <strong>There are no categories present.</strong>
+        {% endif %}
+     {% else %}
+        <li>Please login or register first.</li>
+     {% endif %}
 {% endblock %}
 {% block footer %}
     <li>访问次数：{{ visits }}</li>

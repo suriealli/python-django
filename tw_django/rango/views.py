@@ -32,7 +32,6 @@ def first(request):
         reset_last_visit_time = True
     context_dict['visits'] = visits
     context_dict['last_visit_time'] = last_visit_time
-    print last_visit_time
     response = render(request, 'rango/first_page.html', context_dict)
     if reset_last_visit_time:
         response.set_cookie('last_visit', datetime.now())
