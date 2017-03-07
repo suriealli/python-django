@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rango',
-    'registration',
+    'registration', # add in the registration package
 ]
 
 #密码加密方式

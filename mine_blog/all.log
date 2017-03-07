@@ -1,0 +1,758 @@
+[2017-01-11 10:48:33,156] [ERROR] base : Internal Server Error: /usercontrol/register
+Traceback (most recent call last):
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/views/generic/base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "./joklin_auth/views.py", line 38, in post
+    return self.register(request)
+  File "./joklin_auth/views.py", line 98, in register
+    uri = auth.to_uri('totp','Joklin',username)
+  File "./joklin_auth/totp_auth.py", line 119, in to_uri
+    secret=self.encoded_secret, counter=counter
+  File "./joklin_auth/totp_auth.py", line 93, in encoded_secret
+    secret = base64.b32encode(to_bytes(self.secret))
+  File "/usr/local/python2.7/lib/python2.7/base64.py", line 141, in b32encode
+    quanta, leftover = divmod(len(s), 5)
+TypeError: object of type 'UUID' has no len()
+[2017-01-11 10:48:33,156] [ERROR] base : Internal Server Error: /usercontrol/register
+Traceback (most recent call last):
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/views/generic/base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "./joklin_auth/views.py", line 38, in post
+    return self.register(request)
+  File "./joklin_auth/views.py", line 98, in register
+    uri = auth.to_uri('totp','Joklin',username)
+  File "./joklin_auth/totp_auth.py", line 119, in to_uri
+    secret=self.encoded_secret, counter=counter
+  File "./joklin_auth/totp_auth.py", line 93, in encoded_secret
+    secret = base64.b32encode(to_bytes(self.secret))
+  File "/usr/local/python2.7/lib/python2.7/base64.py", line 141, in b32encode
+    quanta, leftover = divmod(len(s), 5)
+TypeError: object of type 'UUID' has no len()
+[2017-01-11 10:50:11,041] [ERROR] base : Internal Server Error: /usercontrol/register
+Traceback (most recent call last):
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/views/generic/base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "./joklin_auth/views.py", line 38, in post
+    return self.register(request)
+  File "./joklin_auth/views.py", line 100, in register
+    file_name = settings.static_floder + os.sep + "img" + os.sep + "QRcode" + os.sep + "optauth_%s.png" %username
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/conf/__init__.py", line 49, in __getattr__
+    return getattr(self._wrapped, name)
+AttributeError: 'Settings' object has no attribute 'static_floder'
+[2017-01-11 10:50:11,041] [ERROR] base : Internal Server Error: /usercontrol/register
+Traceback (most recent call last):
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/views/generic/base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "./joklin_auth/views.py", line 38, in post
+    return self.register(request)
+  File "./joklin_auth/views.py", line 100, in register
+    file_name = settings.static_floder + os.sep + "img" + os.sep + "QRcode" + os.sep + "optauth_%s.png" %username
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/conf/__init__.py", line 49, in __getattr__
+    return getattr(self._wrapped, name)
+AttributeError: 'Settings' object has no attribute 'static_floder'
+[2017-01-11 10:52:33,431] [ERROR] base : Internal Server Error: /usercontrol/register
+Traceback (most recent call last):
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/views/generic/base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "./joklin_auth/views.py", line 38, in post
+    return self.register(request)
+  File "./joklin_auth/views.py", line 100, in register
+    file_name = static_root + os.sep + "img" + os.sep + "QRcode" + os.sep + "optauth_%s.png" %username
+NameError: global name 'static_root' is not defined
+[2017-01-11 10:52:33,431] [ERROR] base : Internal Server Error: /usercontrol/register
+Traceback (most recent call last):
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/views/generic/base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "./joklin_auth/views.py", line 38, in post
+    return self.register(request)
+  File "./joklin_auth/views.py", line 100, in register
+    file_name = static_root + os.sep + "img" + os.sep + "QRcode" + os.sep + "optauth_%s.png" %username
+NameError: global name 'static_root' is not defined
+[2017-01-11 10:53:26,591] [ERROR] base : Internal Server Error: /usercontrol/register
+Traceback (most recent call last):
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/views/generic/base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "./joklin_auth/views.py", line 38, in post
+    return self.register(request)
+  File "./joklin_auth/views.py", line 100, in register
+    file_name = settings.STATIC_ROOT + os.sep + "img" + os.sep + "QRcode" + os.sep + "optauth_%s.png" %username
+NameError: global name 'static_root' is not defined
+[2017-01-11 10:53:26,591] [ERROR] base : Internal Server Error: /usercontrol/register
+Traceback (most recent call last):
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/views/generic/base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "./joklin_auth/views.py", line 38, in post
+    return self.register(request)
+  File "./joklin_auth/views.py", line 100, in register
+    file_name = settings.STATIC_ROOT + os.sep + "img" + os.sep + "QRcode" + os.sep + "optauth_%s.png" %username
+NameError: global name 'static_root' is not defined
+[2017-01-11 10:53:36,940] [ERROR] base : Internal Server Error: /usercontrol/register
+Traceback (most recent call last):
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/views/generic/base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "./joklin_auth/views.py", line 38, in post
+    return self.register(request)
+  File "./joklin_auth/views.py", line 131, in register
+    user = auth.authenticate(username=username, password=password2)
+AttributeError: 'OtpAuth' object has no attribute 'authenticate'
+[2017-01-11 10:53:36,940] [ERROR] base : Internal Server Error: /usercontrol/register
+Traceback (most recent call last):
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/views/generic/base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "./joklin_auth/views.py", line 38, in post
+    return self.register(request)
+  File "./joklin_auth/views.py", line 131, in register
+    user = auth.authenticate(username=username, password=password2)
+AttributeError: 'OtpAuth' object has no attribute 'authenticate'
+[2017-01-11 11:22:43,789] [ERROR] views : [UserControl]用户未登陆
+[2017-01-11 11:22:51,999] [ERROR] views : [UserControl]用户注册邮件发送失败:[Joklin]/[shunchang.lin@teamtopgame.com]
+[2017-01-11 11:23:17,929] [ERROR] views : [UserControl]用户注册邮件发送失败:[Joklin]/[shunchang.lin@teamtopgame.com]
+[2017-01-11 11:25:03,981] [ERROR] views : [UserControl]用户注册邮件发送失败:[Joklin]/[shunchang.lin@teamtopgame.com]
+[2017-01-11 11:25:50,798] [ERROR] base : Internal Server Error: /usercontrol/register
+Traceback (most recent call last):
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/views/generic/base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "./joklin_auth/views.py", line 39, in post
+    return self.register(request)
+  File "./joklin_auth/views.py", line 125, in register
+    msg.attach(file_name)  #attach_file()
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/core/mail/message.py", line 318, in attach
+    assert content is not None
+AssertionError
+[2017-01-11 11:25:50,798] [ERROR] base : Internal Server Error: /usercontrol/register
+Traceback (most recent call last):
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/views/generic/base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "./joklin_auth/views.py", line 39, in post
+    return self.register(request)
+  File "./joklin_auth/views.py", line 125, in register
+    msg.attach(file_name)  #attach_file()
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/core/mail/message.py", line 318, in attach
+    assert content is not None
+AssertionError
+[2017-01-11 11:30:50,160] [ERROR] views : [UserControl]用户注册邮件发送失败:[Joklin]/[shunchang.lin@teamtopgame.com]
+[2017-01-11 11:38:29,155] [ERROR] views : [UserControl]用户注册邮件发送失败:[Joklin]/[shunchang.lin@teamtopgame.com]
+[2017-01-11 11:39:09,056] [ERROR] base : Internal Server Error: /usercontrol/register
+Traceback (most recent call last):
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/views/generic/base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "./joklin_auth/views.py", line 39, in post
+    return self.register(request)
+  File "./joklin_auth/views.py", line 125, in register
+    msg.attach(file_name)  #attach_file()
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/core/mail/message.py", line 318, in attach
+    assert content is not None
+AssertionError
+[2017-01-11 11:39:09,056] [ERROR] base : Internal Server Error: /usercontrol/register
+Traceback (most recent call last):
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/views/generic/base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "./joklin_auth/views.py", line 39, in post
+    return self.register(request)
+  File "./joklin_auth/views.py", line 125, in register
+    msg.attach(file_name)  #attach_file()
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/core/mail/message.py", line 318, in attach
+    assert content is not None
+AssertionError
+[2017-01-11 14:24:35,720] [ERROR] views : [UserControl]用户注册邮件发送失败:[Joklin]/[shunchang.lin@teamtopgame.com]
+[2017-01-11 14:25:59,440] [ERROR] base : Internal Server Error: /usercontrol/register
+Traceback (most recent call last):
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/views/generic/base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "./joklin_auth/views.py", line 39, in post
+    return self.register(request)
+  File "./joklin_auth/views.py", line 128, in register
+    result = sendEmail_MIMEMultipart(title,message,from_email,to_email,file_name,)
+  File "./joklin_auth/views.py", line 381, in sendEmail_MIMEMultipart
+    HOST = setting.EMAIL_HOST
+NameError: global name 'setting' is not defined
+[2017-01-11 14:25:59,440] [ERROR] base : Internal Server Error: /usercontrol/register
+Traceback (most recent call last):
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/views/generic/base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "./joklin_auth/views.py", line 39, in post
+    return self.register(request)
+  File "./joklin_auth/views.py", line 128, in register
+    result = sendEmail_MIMEMultipart(title,message,from_email,to_email,file_name,)
+  File "./joklin_auth/views.py", line 381, in sendEmail_MIMEMultipart
+    HOST = setting.EMAIL_HOST
+NameError: global name 'setting' is not defined
+[2017-01-11 14:26:22,243] [ERROR] base : Internal Server Error: /usercontrol/register
+Traceback (most recent call last):
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/views/generic/base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "./joklin_auth/views.py", line 39, in post
+    return self.register(request)
+  File "./joklin_auth/views.py", line 128, in register
+    result = sendEmail_MIMEMultipart(title,message,from_email,to_email,file_name,)
+  File "./joklin_auth/views.py", line 388, in sendEmail_MIMEMultipart
+    attach.add_header('User:',username)
+NameError: global name 'username' is not defined
+[2017-01-11 14:26:22,243] [ERROR] base : Internal Server Error: /usercontrol/register
+Traceback (most recent call last):
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/views/generic/base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "./joklin_auth/views.py", line 39, in post
+    return self.register(request)
+  File "./joklin_auth/views.py", line 128, in register
+    result = sendEmail_MIMEMultipart(title,message,from_email,to_email,file_name,)
+  File "./joklin_auth/views.py", line 388, in sendEmail_MIMEMultipart
+    attach.add_header('User:',username)
+NameError: global name 'username' is not defined
+[2017-01-11 14:26:48,940] [ERROR] base : Internal Server Error: /usercontrol/register
+Traceback (most recent call last):
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/views/generic/base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "./joklin_auth/views.py", line 39, in post
+    return self.register(request)
+  File "./joklin_auth/views.py", line 128, in register
+    result = sendEmail_MIMEMultipart(title,message,from_email,to_email,file_name,)
+  File "./joklin_auth/views.py", line 390, in sendEmail_MIMEMultipart
+    msgtext1 = MIMEText(msg,"text","utf-8")
+  File "/usr/local/python2.7/lib/python2.7/email/mime/text.py", line 30, in __init__
+    self.set_payload(_text, _charset)
+  File "/usr/local/python2.7/lib/python2.7/email/message.py", line 226, in set_payload
+    self.set_charset(charset)
+  File "/usr/local/python2.7/lib/python2.7/email/message.py", line 270, in set_charset
+    self._payload = charset.body_encode(self._payload)
+  File "/usr/local/python2.7/lib/python2.7/email/charset.py", line 393, in body_encode
+    return email.base64mime.body_encode(s)
+  File "/usr/local/python2.7/lib/python2.7/email/base64mime.py", line 147, in encode
+    enc = b2a_base64(s[i:i + max_unencoded])
+  File "/usr/local/python2.7/lib/python2.7/email/message.py", line 294, in __getitem__
+    return self.get(name)
+  File "/usr/local/python2.7/lib/python2.7/email/message.py", line 360, in get
+    name = name.lower()
+AttributeError: 'slice' object has no attribute 'lower'
+[2017-01-11 14:26:48,940] [ERROR] base : Internal Server Error: /usercontrol/register
+Traceback (most recent call last):
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/views/generic/base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "./joklin_auth/views.py", line 39, in post
+    return self.register(request)
+  File "./joklin_auth/views.py", line 128, in register
+    result = sendEmail_MIMEMultipart(title,message,from_email,to_email,file_name,)
+  File "./joklin_auth/views.py", line 390, in sendEmail_MIMEMultipart
+    msgtext1 = MIMEText(msg,"text","utf-8")
+  File "/usr/local/python2.7/lib/python2.7/email/mime/text.py", line 30, in __init__
+    self.set_payload(_text, _charset)
+  File "/usr/local/python2.7/lib/python2.7/email/message.py", line 226, in set_payload
+    self.set_charset(charset)
+  File "/usr/local/python2.7/lib/python2.7/email/message.py", line 270, in set_charset
+    self._payload = charset.body_encode(self._payload)
+  File "/usr/local/python2.7/lib/python2.7/email/charset.py", line 393, in body_encode
+    return email.base64mime.body_encode(s)
+  File "/usr/local/python2.7/lib/python2.7/email/base64mime.py", line 147, in encode
+    enc = b2a_base64(s[i:i + max_unencoded])
+  File "/usr/local/python2.7/lib/python2.7/email/message.py", line 294, in __getitem__
+    return self.get(name)
+  File "/usr/local/python2.7/lib/python2.7/email/message.py", line 360, in get
+    name = name.lower()
+AttributeError: 'slice' object has no attribute 'lower'
+[2017-01-11 14:30:31,060] [ERROR] base : Internal Server Error: /usercontrol/register
+Traceback (most recent call last):
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/views/generic/base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "./joklin_auth/views.py", line 39, in post
+    return self.register(request)
+  File "./joklin_auth/views.py", line 128, in register
+    result = sendEmail_MIMEMultipart(title,message,from_email,to_email,file_name,)
+  File "./joklin_auth/views.py", line 390, in sendEmail_MIMEMultipart
+    msgtext1 = MIMEText(msg,"text","utf-8")
+  File "/usr/local/python2.7/lib/python2.7/email/mime/text.py", line 30, in __init__
+    self.set_payload(_text, _charset)
+  File "/usr/local/python2.7/lib/python2.7/email/message.py", line 226, in set_payload
+    self.set_charset(charset)
+  File "/usr/local/python2.7/lib/python2.7/email/message.py", line 270, in set_charset
+    self._payload = charset.body_encode(self._payload)
+  File "/usr/local/python2.7/lib/python2.7/email/charset.py", line 393, in body_encode
+    return email.base64mime.body_encode(s)
+  File "/usr/local/python2.7/lib/python2.7/email/base64mime.py", line 147, in encode
+    enc = b2a_base64(s[i:i + max_unencoded])
+  File "/usr/local/python2.7/lib/python2.7/email/message.py", line 294, in __getitem__
+    return self.get(name)
+  File "/usr/local/python2.7/lib/python2.7/email/message.py", line 360, in get
+    name = name.lower()
+AttributeError: 'slice' object has no attribute 'lower'
+[2017-01-11 14:30:31,060] [ERROR] base : Internal Server Error: /usercontrol/register
+Traceback (most recent call last):
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/views/generic/base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "./joklin_auth/views.py", line 39, in post
+    return self.register(request)
+  File "./joklin_auth/views.py", line 128, in register
+    result = sendEmail_MIMEMultipart(title,message,from_email,to_email,file_name,)
+  File "./joklin_auth/views.py", line 390, in sendEmail_MIMEMultipart
+    msgtext1 = MIMEText(msg,"text","utf-8")
+  File "/usr/local/python2.7/lib/python2.7/email/mime/text.py", line 30, in __init__
+    self.set_payload(_text, _charset)
+  File "/usr/local/python2.7/lib/python2.7/email/message.py", line 226, in set_payload
+    self.set_charset(charset)
+  File "/usr/local/python2.7/lib/python2.7/email/message.py", line 270, in set_charset
+    self._payload = charset.body_encode(self._payload)
+  File "/usr/local/python2.7/lib/python2.7/email/charset.py", line 393, in body_encode
+    return email.base64mime.body_encode(s)
+  File "/usr/local/python2.7/lib/python2.7/email/base64mime.py", line 147, in encode
+    enc = b2a_base64(s[i:i + max_unencoded])
+  File "/usr/local/python2.7/lib/python2.7/email/message.py", line 294, in __getitem__
+    return self.get(name)
+  File "/usr/local/python2.7/lib/python2.7/email/message.py", line 360, in get
+    name = name.lower()
+AttributeError: 'slice' object has no attribute 'lower'
+[2017-01-11 14:34:08,913] [ERROR] base : Internal Server Error: /usercontrol/register
+Traceback (most recent call last):
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/views/generic/base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "./joklin_auth/views.py", line 39, in post
+    return self.register(request)
+  File "./joklin_auth/views.py", line 128, in register
+    result = sendEmail_MIMEMultipart(title,message,from_email,to_email,file_name,)
+  File "./joklin_auth/views.py", line 390, in sendEmail_MIMEMultipart
+    msgtext1 = MIMEText(msg,"html","utf-8")
+  File "/usr/local/python2.7/lib/python2.7/email/mime/text.py", line 30, in __init__
+    self.set_payload(_text, _charset)
+  File "/usr/local/python2.7/lib/python2.7/email/message.py", line 226, in set_payload
+    self.set_charset(charset)
+  File "/usr/local/python2.7/lib/python2.7/email/message.py", line 270, in set_charset
+    self._payload = charset.body_encode(self._payload)
+  File "/usr/local/python2.7/lib/python2.7/email/charset.py", line 393, in body_encode
+    return email.base64mime.body_encode(s)
+  File "/usr/local/python2.7/lib/python2.7/email/base64mime.py", line 147, in encode
+    enc = b2a_base64(s[i:i + max_unencoded])
+  File "/usr/local/python2.7/lib/python2.7/email/message.py", line 294, in __getitem__
+    return self.get(name)
+  File "/usr/local/python2.7/lib/python2.7/email/message.py", line 360, in get
+    name = name.lower()
+AttributeError: 'slice' object has no attribute 'lower'
+[2017-01-11 14:34:08,913] [ERROR] base : Internal Server Error: /usercontrol/register
+Traceback (most recent call last):
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/views/generic/base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "./joklin_auth/views.py", line 39, in post
+    return self.register(request)
+  File "./joklin_auth/views.py", line 128, in register
+    result = sendEmail_MIMEMultipart(title,message,from_email,to_email,file_name,)
+  File "./joklin_auth/views.py", line 390, in sendEmail_MIMEMultipart
+    msgtext1 = MIMEText(msg,"html","utf-8")
+  File "/usr/local/python2.7/lib/python2.7/email/mime/text.py", line 30, in __init__
+    self.set_payload(_text, _charset)
+  File "/usr/local/python2.7/lib/python2.7/email/message.py", line 226, in set_payload
+    self.set_charset(charset)
+  File "/usr/local/python2.7/lib/python2.7/email/message.py", line 270, in set_charset
+    self._payload = charset.body_encode(self._payload)
+  File "/usr/local/python2.7/lib/python2.7/email/charset.py", line 393, in body_encode
+    return email.base64mime.body_encode(s)
+  File "/usr/local/python2.7/lib/python2.7/email/base64mime.py", line 147, in encode
+    enc = b2a_base64(s[i:i + max_unencoded])
+  File "/usr/local/python2.7/lib/python2.7/email/message.py", line 294, in __getitem__
+    return self.get(name)
+  File "/usr/local/python2.7/lib/python2.7/email/message.py", line 360, in get
+    name = name.lower()
+AttributeError: 'slice' object has no attribute 'lower'
+[2017-01-11 14:40:08,782] [ERROR] views : 邮件发送失败:STARTTLS extension not supported by server.
+[2017-01-11 14:41:36,512] [ERROR] views : None
+[2017-01-11 14:47:10,264] [ERROR] views : None
+[2017-01-11 15:08:58,194] [ERROR] views : None
+[2017-01-11 15:29:15,288] [ERROR] views : None
+[2017-01-11 15:32:41,055] [ERROR] views : None
+[2017-01-11 15:35:51,815] [ERROR] views : None
+[2017-01-11 15:38:01,381] [ERROR] views : None
+[2017-01-11 15:48:38,722] [ERROR] base : Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/core/urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/core/urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/core/urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/python2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "./joklin_blog/urls.py", line 70, in <module>
+    url(r'', include('joklin_auth.urls')),
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/local/python2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "./joklin_auth/urls.py", line 2, in <module>
+    from joklin_auth.views import UserControl
+  File "./joklin_auth/views.py", line 137
+    if "������" in result:
+    ^
+IndentationError: unexpected indent
+[2017-01-11 15:48:38,722] [ERROR] base : Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/core/urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/core/urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/core/urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/python2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "./joklin_blog/urls.py", line 70, in <module>
+    url(r'', include('joklin_auth.urls')),
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/local/python2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "./joklin_auth/urls.py", line 2, in <module>
+    from joklin_auth.views import UserControl
+  File "./joklin_auth/views.py", line 137
+    if "������" in result:
+    ^
+IndentationError: unexpected indent
+[2017-01-11 15:48:41,083] [ERROR] base : Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/middleware/common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/core/urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/core/urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/core/urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/core/urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/core/urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/python2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "./joklin_blog/urls.py", line 70, in <module>
+    url(r'', include('joklin_auth.urls')),
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/local/python2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "./joklin_auth/urls.py", line 2, in <module>
+    from joklin_auth.views import UserControl
+  File "./joklin_auth/views.py", line 137
+    if "������" in result:
+    ^
+IndentationError: unexpected indent
+[2017-01-11 15:48:41,083] [ERROR] base : Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/middleware/common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/core/urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/core/urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/core/urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/core/urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/core/urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/python2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "./joklin_blog/urls.py", line 70, in <module>
+    url(r'', include('joklin_auth.urls')),
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/local/python2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "./joklin_auth/urls.py", line 2, in <module>
+    from joklin_auth.views import UserControl
+  File "./joklin_auth/views.py", line 137
+    if "������" in result:
+    ^
+IndentationError: unexpected indent
+[2017-01-11 15:48:42,058] [ERROR] base : Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/middleware/common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/core/urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/core/urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/core/urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/core/urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/core/urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/python2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "./joklin_blog/urls.py", line 70, in <module>
+    url(r'', include('joklin_auth.urls')),
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/local/python2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "./joklin_auth/urls.py", line 2, in <module>
+    from joklin_auth.views import UserControl
+  File "./joklin_auth/views.py", line 137
+    if "������" in result:
+    ^
+IndentationError: unexpected indent
+[2017-01-11 15:48:42,058] [ERROR] base : Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/middleware/common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/core/urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/core/urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/core/urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/core/urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/core/urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/python2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "./joklin_blog/urls.py", line 70, in <module>
+    url(r'', include('joklin_auth.urls')),
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/local/python2.7/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "./joklin_auth/urls.py", line 2, in <module>
+    from joklin_auth.views import UserControl
+  File "./joklin_auth/views.py", line 137
+    if "������" in result:
+    ^
+IndentationError: unexpected indent
+[2017-01-11 15:49:37,292] [ERROR] base : Internal Server Error: /usercontrol/register
+Traceback (most recent call last):
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/views/generic/base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "./joklin_auth/views.py", line 39, in post
+    return self.register(request)
+  File "./joklin_auth/views.py", line 120, in register
+    ''' %(username,site_name,username,email,domain)
+UnicodeDecodeError: 'ascii' codec can't decode byte 0xe6 in position 4: ordinal not in range(128)
+[2017-01-11 15:49:37,292] [ERROR] base : Internal Server Error: /usercontrol/register
+Traceback (most recent call last):
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/views/generic/base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "./joklin_auth/views.py", line 39, in post
+    return self.register(request)
+  File "./joklin_auth/views.py", line 120, in register
+    ''' %(username,site_name,username,email,domain)
+UnicodeDecodeError: 'ascii' codec can't decode byte 0xe6 in position 4: ordinal not in range(128)
+[2017-01-11 15:50:11,169] [ERROR] base : Internal Server Error: /usercontrol/register
+Traceback (most recent call last):
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/views/generic/base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "./joklin_auth/views.py", line 39, in post
+    return self.register(request)
+  File "./joklin_auth/views.py", line 137, in register
+    if "������" in result:
+TypeError: argument of type 'NoneType' is not iterable
+[2017-01-11 15:50:11,169] [ERROR] base : Internal Server Error: /usercontrol/register
+Traceback (most recent call last):
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/views/generic/base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "./joklin_auth/views.py", line 39, in post
+    return self.register(request)
+  File "./joklin_auth/views.py", line 137, in register
+    if "������" in result:
+TypeError: argument of type 'NoneType' is not iterable
+[2017-01-11 15:53:57,647] [ERROR] base : Internal Server Error: /usercontrol/register
+Traceback (most recent call last):
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/views/generic/base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "./joklin_auth/views.py", line 39, in post
+    return self.register(request)
+  File "./joklin_auth/views.py", line 139, in register
+    if "������" in result:
+TypeError: argument of type 'NoneType' is not iterable
+[2017-01-11 15:53:57,647] [ERROR] base : Internal Server Error: /usercontrol/register
+Traceback (most recent call last):
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/views/generic/base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "./joklin_auth/views.py", line 39, in post
+    return self.register(request)
+  File "./joklin_auth/views.py", line 139, in register
+    if "������" in result:
+TypeError: argument of type 'NoneType' is not iterable
+[2017-01-11 15:57:06,294] [ERROR] base : Internal Server Error: /usercontrol/register
+Traceback (most recent call last):
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/views/generic/base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "./joklin_auth/views.py", line 39, in post
+    return self.register(request)
+  File "./joklin_auth/views.py", line 138, in register
+    result = sendEmail_MIMEMultipart(title,message,from_email,to_email,file_name,)
+  File "./joklin_auth/views.py", line 401, in sendEmail_MIMEMultipart
+    msg.attch(message)
+AttributeError: MIMEMultipart instance has no attribute 'attch'
+[2017-01-11 15:57:06,294] [ERROR] base : Internal Server Error: /usercontrol/register
+Traceback (most recent call last):
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/views/generic/base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "./joklin_auth/views.py", line 39, in post
+    return self.register(request)
+  File "./joklin_auth/views.py", line 138, in register
+    result = sendEmail_MIMEMultipart(title,message,from_email,to_email,file_name,)
+  File "./joklin_auth/views.py", line 401, in sendEmail_MIMEMultipart
+    msg.attch(message)
+AttributeError: MIMEMultipart instance has no attribute 'attch'
+[2017-01-11 15:57:37,054] [ERROR] views : [UserControl]用户注册邮件发送失败:[Joklin]/[shunchang.lin@teamtopgame.com]
+[2017-01-11 15:58:38,313] [ERROR] base : Internal Server Error: /usercontrol/register
+Traceback (most recent call last):
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/views/generic/base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "./joklin_auth/views.py", line 39, in post
+    return self.register(request)
+  File "./joklin_auth/views.py", line 139, in register
+    if "������" in result:
+TypeError: argument of type 'NoneType' is not iterable
+[2017-01-11 15:58:38,313] [ERROR] base : Internal Server Error: /usercontrol/register
+Traceback (most recent call last):
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/python2.7/lib/python2.7/site-packages/django/views/generic/base.py", line 89, in dispatch
+    return handler(request, *args, **kwargs)
+  File "./joklin_auth/views.py", line 39, in post
+    return self.register(request)
+  File "./joklin_auth/views.py", line 139, in register
+    if "������" in result:
+TypeError: argument of type 'NoneType' is not iterable

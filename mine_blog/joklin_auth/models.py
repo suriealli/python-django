@@ -24,6 +24,7 @@ class JoklinUser(AbstractUser):
                            verbose_name=u'头像地址')
     intro = models.CharField(max_length=200, blank=True, null=True,
                              verbose_name=u'简介')
-
+    SHA1 = models.CharField(max_length=200,blank=True,verbose_name=u'totp')
+    #定义模型特性 app_label定义其所属的应用
     class Meta(AbstractUser.Meta):
         app_label = string_with_title('joklin_auth', u"用户管理")
